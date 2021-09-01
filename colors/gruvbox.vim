@@ -50,11 +50,11 @@ if !exists('g:gruvbox_guisp_fallback') || index(['fg', 'bg'], g:gruvbox_guisp_fa
 endif
 
 if !exists('g:gruvbox_improved_strings')
-  let g:gruvbox_improved_strings=1
+  let g:gruvbox_improved_strings=0
 endif
 
 if !exists('g:gruvbox_improved_warnings')
-  let g:gruvbox_improved_warnings=1
+  let g:gruvbox_improved_warnings=0
 endif
 
 if !exists('g:gruvbox_termcolors')

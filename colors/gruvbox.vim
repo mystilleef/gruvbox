@@ -50,11 +50,11 @@ if !exists('g:gruvbox_guisp_fallback') || index(['fg', 'bg'], g:gruvbox_guisp_fa
 endif
 
 if !exists('g:gruvbox_improved_strings')
-  let g:gruvbox_improved_strings=0
+  let g:gruvbox_improved_strings=1
 endif
 
 if !exists('g:gruvbox_improved_warnings')
-  let g:gruvbox_improved_warnings=0
+  let g:gruvbox_improved_warnings=1
 endif
 
 if !exists('g:gruvbox_termcolors')
@@ -70,11 +70,11 @@ if exists('g:gruvbox_contrast')
 endif
 
 if !exists('g:gruvbox_contrast_dark')
-  let g:gruvbox_contrast_dark='medium'
+  let g:gruvbox_contrast_dark='hard'
 endif
 
 if !exists('g:gruvbox_contrast_light')
-  let g:gruvbox_contrast_light='medium'
+  let g:gruvbox_contrast_light='hard'
 endif
 
 let s:is_dark=(&background == 'dark')
@@ -542,15 +542,15 @@ hi! link WarningMsg GruvboxRedBold
 " Gutter: {{{
 
 " Line number for :number and :# commands
-call s:HL('LineNr', s:bg4, s:number_column)
+call s:HL('LineNr', s:none, s:number_column)
 
 " Column where signs are displayed
 call s:HL('SignColumn', s:none, s:sign_column)
 
 " Line used for closed folds
-call s:HL('Folded', s:gray, s:bg1, s:italic)
+call s:HL('Folded', s:gray, s:none, s:italic)
 " Column where folds are displayed
-call s:HL('FoldColumn', s:gray, s:bg1)
+call s:HL('FoldColumn', s:gray, s:none)
 
 " }}}
 " Cursor: {{{

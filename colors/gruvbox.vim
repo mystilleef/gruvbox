@@ -323,7 +323,7 @@ else
   endif
 endif
 
-let s:color_column = s:bg1
+let s:color_column = s:gb.dark0
 if exists('g:gruvbox_color_column')
   let s:color_column = get(s:gb, g:gruvbox_color_column)
 endif

@@ -87,8 +87,8 @@ let s:gb = {}
 
 " fill it with absolute colors
 let s:gb.dark0_hard  = ['#101010', 234]     " 29-32-33
-let s:gb.dark0       = ['#1d2021', 235]     " 40-40-40
-let s:gb.dark0_soft  = ['#202020', 236]     " 50-48-47
+let s:gb.dark0       = ['#101010', 235]     " 40-40-40
+let s:gb.dark0_soft  = ['#101010', 236]     " 50-48-47
 let s:gb.dark1       = ['#202020', 237]     " 60-56-54
 let s:gb.dark2       = ['#303030', 239]     " 80-73-69
 let s:gb.dark3       = ['#404040', 241]     " 102-92-84
@@ -98,14 +98,14 @@ let s:gb.dark4_256   = ['#505050', 243]     " 124-111-100
 let s:gb.gray_245    = ['#909090', 245]     " 146-131-116
 let s:gb.gray_244    = ['#909090', 244]     " 146-131-116
 
-let s:gb.light0_hard = ['#f9f5d7', 230]     " 249-245-215
-let s:gb.light0      = ['#fbf1c7', 229]     " 253-244-193
-let s:gb.light0_soft = ['#f2e5bc', 228]     " 242-229-188
-let s:gb.light1      = ['#ebdbb2', 223]     " 235-219-178
-let s:gb.light2      = ['#d5c4a1', 250]     " 213-196-161
-let s:gb.light3      = ['#bdae93', 248]     " 189-174-147
-let s:gb.light4      = ['#a89984', 246]     " 168-153-132
-let s:gb.light4_256  = ['#a89984', 246]     " 168-153-132
+let s:gb.light0_hard = ['#f0f0f0', 230]     " 249-245-215
+let s:gb.light0      = ['#f0f0f0', 229]     " 253-244-193
+let s:gb.light0_soft = ['#f0f0f0', 228]     " 242-229-188
+let s:gb.light1      = ['#e0e0e0', 223]     " 235-219-178
+let s:gb.light2      = ['#d0d0d0', 250]     " 213-196-161
+let s:gb.light3      = ['#b0b0b0', 248]     " 189-174-147
+let s:gb.light4      = ['#a0a0a0', 246]     " 168-153-132
+let s:gb.light4_256  = ['#a0a0a0', 246]     " 168-153-132
 
 let s:gb.bright_red     = ['#fb4934', 167]     " 251-73-52
 let s:gb.bright_green   = ['#b8bb26', 142]     " 184-187-38

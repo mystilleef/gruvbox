@@ -323,7 +323,7 @@ else
   endif
 endif
 
-let s:color_column = s:gb.dark0
+let s:color_column = s:bg1
 if exists('g:gruvbox_color_column')
   let s:color_column = get(s:gb, g:gruvbox_color_column)
 endif
@@ -475,7 +475,7 @@ endif
 
 if version >= 700
   " Screen line that the cursor is
-  call s:HL('CursorLine',   s:none, s:gb.dark0)
+  call s:HL('CursorLine',   s:none, s:bg1)
   " Screen column that the cursor is
   hi! link CursorColumn CursorLine
 
@@ -498,7 +498,7 @@ if version >= 703
   call s:HL('Conceal', s:blue, s:none)
 
   " Line number of CursorLine
-  call s:HL('CursorLineNr', s:yellow, s:gb.dark0)
+  call s:HL('CursorLineNr', s:yellow, s:bg0)
 endif
 
 hi! link NonText GruvboxBg2

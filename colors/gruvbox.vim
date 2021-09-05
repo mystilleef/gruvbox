@@ -49,14 +49,6 @@ if !exists('g:gruvbox_guisp_fallback') || index(['fg', 'bg'], g:gruvbox_guisp_fa
   let g:gruvbox_guisp_fallback='NONE'
 endif
 
-if !exists('g:gruvbox_improved_strings')
-  let g:gruvbox_improved_strings=0
-endif
-
-if !exists('g:gruvbox_improved_warnings')
-  let g:gruvbox_improved_warnings=0
-endif
-
 if !exists('g:gruvbox_termcolors')
   let g:gruvbox_termcolors=256
 endif
@@ -539,11 +531,7 @@ hi! link lCursor Cursor
 " }}}
 " Syntax Highlighting: {{{
 
-if g:gruvbox_improved_strings == 0
-  hi! link Special GruvboxOrange
-else
-  call s:HL('Special', s:orange, s:bg1, s:italicize_strings)
-endif
+hi! link Special GruvboxOrange
 
 call s:HL('Comment', s:gray, s:none, s:italicize_comments)
 call s:HL('Todo', s:vim_fg, s:vim_bg, s:bold . s:italic)
@@ -582,14 +570,13 @@ hi! link PreCondit GruvboxAqua
 
 " Generic constant
 hi! link Constant GruvboxPurple
+
 " Character constant: 'c', '/n'
 hi! link Character GruvboxPurple
+
 " String constant: "this is a string"
-if g:gruvbox_improved_strings == 0
-  call s:HL('String',  s:blue, s:none, s:italicize_strings)
-else
-  call s:HL('String',  s:fg1, s:bg1, s:italicize_strings)
-endif
+call s:HL('String',  s:blue, s:none, s:italicize_strings)
+
 " Boolean constant: TRUE, false
 hi! link Boolean GruvboxPurple
 " Number constant: 234, 0xff
@@ -637,11 +624,7 @@ call s:HL('DiffText',   s:yellow, s:bg0, s:inverse)
 
 if has("spell")
   " Not capitalised word, or compile warnings
-  if g:gruvbox_improved_warnings == 0
-    call s:HL('SpellCap',   s:none, s:none, s:undercurl, s:red)
-  else
-    call s:HL('SpellCap',   s:green, s:none, s:bold . s:italic)
-  endif
+  call s:HL('SpellCap',   s:none, s:none, s:undercurl, s:red)
   " Not recognized word
   call s:HL('SpellBad',   s:none, s:none, s:undercurl, s:blue)
   " Wrong spelling for selected region

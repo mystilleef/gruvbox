@@ -470,7 +470,7 @@ if version >= 703
   call s:HL('Conceal', s:blue, s:none)
 
   " Line number of CursorLine
-  call s:HL('CursorLineNr', s:yellow, s:bg0)
+  call s:HL('CursorLineNr', s:yellow, s:bg1)
 endif
 
 hi! link NonText GruvboxBg2

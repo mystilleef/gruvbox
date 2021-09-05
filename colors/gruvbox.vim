@@ -65,18 +65,6 @@ if !exists('g:gruvbox_invert_indent_guides')
   let g:gruvbox_invert_indent_guides=0
 endif
 
-if exists('g:gruvbox_contrast')
-  echo 'g:gruvbox_contrast is deprecated; use g:gruvbox_contrast_light and g:gruvbox_contrast_dark instead'
-endif
-
-if !exists('g:gruvbox_contrast_dark')
-  let g:gruvbox_contrast_dark='hard'
-endif
-
-if !exists('g:gruvbox_contrast_light')
-  let g:gruvbox_contrast_light='hard'
-endif
-
 let s:is_dark=(&background == 'dark')
 
 " }}}
@@ -86,9 +74,7 @@ let s:is_dark=(&background == 'dark')
 let s:gb = {}
 
 " fill it with absolute colors
-let s:gb.dark0_hard  = ['#101010', 234]     " 29-32-33
 let s:gb.dark0       = ['#101010', 235]     " 40-40-40
-let s:gb.dark0_soft  = ['#101010', 236]     " 50-48-47
 let s:gb.dark1       = ['#202020', 237]     " 60-56-54
 let s:gb.dark2       = ['#303030', 239]     " 80-73-69
 let s:gb.dark3       = ['#404040', 241]     " 102-92-84
@@ -98,9 +84,7 @@ let s:gb.dark4_256   = ['#505050', 243]     " 124-111-100
 let s:gb.gray_245    = ['#909090', 245]     " 146-131-116
 let s:gb.gray_244    = ['#909090', 244]     " 146-131-116
 
-let s:gb.light0_hard = ['#f0f0f0', 230]     " 249-245-215
 let s:gb.light0      = ['#f0f0f0', 229]     " 253-244-193
-let s:gb.light0_soft = ['#f0f0f0', 228]     " 242-229-188
 let s:gb.light1      = ['#e0e0e0', 223]     " 235-219-178
 let s:gb.light2      = ['#d0d0d0', 250]     " 213-196-161
 let s:gb.light3      = ['#b0b0b0', 248]     " 189-174-147
@@ -169,12 +153,6 @@ let s:none = ['NONE', 'NONE']
 " determine relative colors
 if s:is_dark
   let s:bg0  = s:gb.dark0
-  if g:gruvbox_contrast_dark == 'soft'
-    let s:bg0  = s:gb.dark0_soft
-  elseif g:gruvbox_contrast_dark == 'hard'
-    let s:bg0  = s:gb.dark0_hard
-  endif
-
   let s:bg1  = s:gb.dark1
   let s:bg2  = s:gb.dark2
   let s:bg3  = s:gb.dark3
@@ -199,12 +177,6 @@ if s:is_dark
   let s:orange = s:gb.bright_orange
 else
   let s:bg0  = s:gb.light0
-  if g:gruvbox_contrast_light == 'soft'
-    let s:bg0  = s:gb.light0_soft
-  elseif g:gruvbox_contrast_light == 'hard'
-    let s:bg0  = s:gb.light0_hard
-  endif
-
   let s:bg1  = s:gb.light1
   let s:bg2  = s:gb.light2
   let s:bg3  = s:gb.light3

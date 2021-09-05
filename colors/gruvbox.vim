@@ -1,9 +1,9 @@
 " -----------------------------------------------------------------------------
 " File: gruvbox.vim
-" Description: Retro groove color scheme for Vim
-" Author: morhetz <morhetz@gmail.com>
-" Source: https://github.com/morhetz/gruvbox
-" Last Modified: 12 Aug 2017
+" Description: Customized version of the gruvbox color scheme for Vim
+" Author: morhetz <morhetz@gmail.com>, mystilleef <mystilleef@gmail.com>
+" Source: https://github.com/mystilleef/gruvbox
+" Last Modified: 5 Sep 2021
 " -----------------------------------------------------------------------------
 
 " Supporting code -------------------------------------------------------------

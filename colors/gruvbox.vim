@@ -870,6 +870,40 @@ call s:HL('CocHintHighlight', s:none, s:none, s:undercurl, s:blue)
 
 " }}}
 
+" nvim lsp {{{
+
+hi! link LspDiagnosticsDefaultError GruvboxRed
+hi! link LspDiagnosticsDefaultWarning GruvboxOrange
+hi! link LspDiagnosticsDefaultInformation GruvboxGreen
+hi! link LspDiagnosticsDefaultHint GruvboxBlue
+
+hi! link LspDiagnosticsVirtualTextError GruvboxRed
+hi! link LspDiagnosticsVirtualTextWarning GruvboxOrange
+hi! link LspDiagnosticsVirtualTextInformation  GruvboxGreen
+hi! link LspDiagnosticsVirtualTextHint GruvboxBlue
+
+hi! link LspDiagnosticsFloatingError GruvboxRed
+hi! link LspDiagnosticsFloatingWarning GruvboxOrange
+hi! link LspDiagnosticsFloatingInformation GruvboxGreen
+hi! link LspDiagnosticsFloatingHint GruvboxBlue
+
+hi! link LspDiagnosticsSignError GruvboxRedSign
+hi! link LspDiagnosticsSignWarning GruvboxOrangeSign
+hi! link LspDiagnosticsSignInformation GruvboxGreenSign
+hi! link LspDiagnosticsSignHint GruvboxBlueSign
+
+hi! link LspCodeLens GruvboxGray
+hi! link LspCodeLensSeparator GruvboxGray 
+
+hi! link LspSignatureActiveParameter  GruvboxBlue
+
+call s:HL('LspDiagnosticsUnderlineError', s:none, s:none, s:undercurl, s:red)
+call s:HL('LspDiagnosticsUnderlineWarning', s:none, s:none, s:undercurl, s:orange)
+call s:HL('LspDiagnosticsUnderlineInformation', s:none, s:none, s:undercurl, s:green)
+call s:HL('LspDiagnosticsUnderlineHint', s:none, s:none, s:undercurl, s:blue)
+
+" }}}
+
 " Filetype specific -----------------------------------------------------------
 " Diff: {{{
 

@@ -1,3 +1,5 @@
+scriptencoding utf-8
+
 " -----------------------------------------------------------------------------
 " File: gruvbox.vim
 " Description: Customized version of the gruvbox color scheme for Vim
@@ -9,11 +11,9 @@
 " Supporting code -------------------------------------------------------------
 " Initialisation: {{{
 
-if version > 580
-  hi clear
-  if exists("syntax_on")
-    syntax reset
-  endif
+hi clear
+if exists('syntax_on')
+  syntax reset
 endif
 
 let g:colors_name='gruvbox'
@@ -23,24 +23,29 @@ if !(has('termguicolors') && &termguicolors) && !has('gui_running') && &t_Co != 
 endif
 
 " }}}
+
 " Global Settings: {{{
 
 if !exists('g:gruvbox_bold')
   let g:gruvbox_bold=1
 endif
+
 if !exists('g:gruvbox_italic')
-  if has('gui_running') || $TERM_ITALICS == 'true'
+  if has('gui_running') || $TERM_ITALICS ==? 'true'
     let g:gruvbox_italic=1
   else
     let g:gruvbox_italic=0
   endif
 endif
+
 if !exists('g:gruvbox_undercurl')
   let g:gruvbox_undercurl=1
 endif
+
 if !exists('g:gruvbox_underline')
   let g:gruvbox_underline=1
 endif
+
 if !exists('g:gruvbox_inverse')
   let g:gruvbox_inverse=1
 endif
@@ -57,7 +62,7 @@ if !exists('g:gruvbox_invert_indent_guides')
   let g:gruvbox_invert_indent_guides=0
 endif
 
-let s:is_dark=(&background == 'dark')
+let s:is_dark=(&background ==? 'dark')
 
 " }}}
 " Palette: {{{
@@ -357,12 +362,12 @@ function! s:HL(group, fg, ...)
 
   " special fallback
   if a:0 >= 3
-    if g:gruvbox_guisp_fallback != 'NONE'
+    if g:gruvbox_guisp_fallback !=? 'NONE'
       let fg = a:3
     endif
 
     " bg fallback mode should invert higlighting
-    if g:gruvbox_guisp_fallback == 'bg'
+    if g:gruvbox_guisp_fallback ==? 'bg'
       let emstr .= 'inverse,'
     endif
   endif
@@ -437,33 +442,29 @@ else
   set background=light
 endif
 
-if version >= 700
-  " Screen line that the cursor is
-  call s:HL('CursorLine',   s:none, s:bg1)
-  " Screen column that the cursor is
-  hi! link CursorColumn CursorLine
+" Screen line that the cursor is
+call s:HL('CursorLine',   s:none, s:bg1)
+" Screen column that the cursor is
+hi! link CursorColumn CursorLine
 
-  " Tab pages line filler
-  call s:HL('TabLineFill', s:bg4, s:bg1, s:invert_tabline)
-  " Active tab page label
-  call s:HL('TabLineSel', s:green, s:bg1, s:invert_tabline)
-  " Not active tab page label
-  hi! link TabLine TabLineFill
+" Tab pages line filler
+call s:HL('TabLineFill', s:bg4, s:bg1, s:invert_tabline)
+" Active tab page label
+call s:HL('TabLineSel', s:green, s:bg1, s:invert_tabline)
+" Not active tab page label
+hi! link TabLine TabLineFill
 
-  " Match paired bracket under the cursor
-  call s:HL('MatchParen', s:none, s:bg3, s:bold)
-endif
+" Match paired bracket under the cursor
+call s:HL('MatchParen', s:none, s:bg3, s:bold)
 
-if version >= 703
-  " Highlighted screen columns
-  call s:HL('ColorColumn',  s:none, s:color_column)
+" Highlighted screen columns
+call s:HL('ColorColumn',  s:none, s:color_column)
 
-  " Concealed element: \lambda → λ
-  call s:HL('Conceal', s:blue, s:none)
+" Concealed element: \lambda → λ
+call s:HL('Conceal', s:blue, s:none)
 
-  " Line number of CursorLine
-  call s:HL('CursorLineNr', s:yellow, s:bg1)
-endif
+" Line number of CursorLine
+call s:HL('CursorLineNr', s:yellow, s:bg1)
 
 hi! link NonText GruvboxBg2
 hi! link SpecialKey GruvboxBg2
@@ -606,20 +607,19 @@ hi! link TSPunctDelimiter GruvboxRedBold
 hi! link TSPunctBracket GruvboxRedBold
 hi! link TSPunctSpecial GruvboxRedBold
 hi! link TSLabel GruvboxPurple
+
 " }}}
 
 " Completion Menu: {{{
 
-if version >= 700
-  " Popup menu: normal item
-  call s:HL('Pmenu', s:fg1, s:bg2)
-  " Popup menu: selected item
-  call s:HL('PmenuSel', s:bg2, s:blue, s:bold)
-  " Popup menu: scrollbar
-  call s:HL('PmenuSbar', s:none, s:bg2)
-  " Popup menu: scrollbar thumb
-  call s:HL('PmenuThumb', s:none, s:bg4)
-endif
+" Popup menu: normal item
+call s:HL('Pmenu', s:fg1, s:bg2)
+" Popup menu: selected item
+call s:HL('PmenuSel', s:bg2, s:blue, s:bold)
+" Popup menu: scrollbar
+call s:HL('PmenuSbar', s:none, s:bg2)
+" Popup menu: scrollbar thumb
+call s:HL('PmenuThumb', s:none, s:bg4)
 
 " }}}
 
@@ -638,7 +638,7 @@ call s:HL('DiffText',   s:yellow, s:bg0, s:inverse)
 
 " Spelling: {{{
 
-if has("spell")
+if has('spell')
   " Not capitalised word, or compile warnings
   call s:HL('SpellCap',   s:none, s:none, s:undercurl, s:red)
   " Not recognized word
@@ -674,7 +674,7 @@ hi! link LspDiagnosticsSignInformation GruvboxGreenSign
 hi! link LspDiagnosticsSignHint GruvboxBlueSign
 
 hi! link LspCodeLens GruvboxGray
-hi! link LspCodeLensSeparator GruvboxGray 
+hi! link LspCodeLensSeparator GruvboxGray
 
 hi! link LspSignatureActiveParameter  GruvboxBlue
 

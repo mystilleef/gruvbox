@@ -538,19 +538,19 @@ call s:HL('Todo', s:vim_fg, s:vim_bg, s:bold . s:italic)
 call s:HL('Error', s:red, s:vim_bg, s:bold . s:inverse)
 
 " Generic statement
-hi! link Statement GruvboxRed
+hi! link Statement GruvboxRedBold
 " if, then, else, endif, swicth, etc.
-hi! link Conditional GruvboxRed
+hi! link Conditional GruvboxRedBold
 " for, do, while, etc.
-hi! link Repeat GruvboxRed
+hi! link Repeat GruvboxRedBold
 " case, default, etc.
-hi! link Label GruvboxRed
+hi! link Label GruvboxRedBold
 " try, catch, throw
-hi! link Exception GruvboxRed
+hi! link Exception GruvboxRedBold
 " sizeof, "+", "*", etc.
-hi! link Operator Normal
+hi! link Operator GruvboxRedBold
 " Any other keyword
-hi! link Keyword GruvboxRed
+hi! link Keyword GruvboxRedBold
 
 " Variable name
 hi! link Identifier GruvboxBlue
@@ -585,13 +585,13 @@ hi! link Number GruvboxPurple
 hi! link Float GruvboxPurple
 
 " Generic type
-hi! link Type GruvboxYellow
+hi! link Type GruvboxYellowBold
 " static, register, volatile, etc
-hi! link StorageClass GruvboxOrange
+hi! link StorageClass GruvboxYellowBold
 " struct, union, enum, etc.
-hi! link Structure GruvboxAqua
+hi! link Structure GruvboxYellowBold
 " typedef
-hi! link Typedef GruvboxYellow
+hi! link Typedef GruvboxYellowBold
 
 " }}}
 " Completion Menu: {{{

@@ -12,11 +12,10 @@ function! gruvbox#invert_signs_toggle()
   else
     let g:gruvbox_invert_signs=0
   endif
-
   colorscheme gruvbox
 endfunction
 
-" Search Highlighting {{{
+" Search Highlighting
 
 function! gruvbox#hls_show()
   set hlsearch
@@ -35,7 +34,3 @@ function! gruvbox#hls_toggle()
     call gruvbox#hls_show()
   endif
 endfunction
-
-" }}}
-
-" vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker:

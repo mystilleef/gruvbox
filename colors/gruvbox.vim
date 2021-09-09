@@ -594,6 +594,14 @@ hi! link Structure GruvboxYellowBold
 hi! link Typedef GruvboxYellowBold
 
 " }}}
+
+" Treesitter {{{
+hi! link TSKeyword GruvboxRedBold
+hi! link TSOperator GruvboxRedBold
+hi! link TSPunctDelimiter GruvboxRedBold
+hi! link TSPunctBracket GruvboxRedBold
+" }}}
+
 " Completion Menu: {{{
 
 if version >= 700

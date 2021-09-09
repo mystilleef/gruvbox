@@ -602,12 +602,13 @@ hi! link Typedef GruvboxYellowBold
 " Treesitter {{{
 
 hi! link TSKeyword GruvboxRedBold
-hi! link TSOperator GruvboxRedBold
-hi! link TSPunctDelimiter GruvboxRedBold
-hi! link TSPunctBracket GruvboxRedBold
-hi! link TSPunctSpecial GruvboxRedBold
-hi! link TSTagDelimiter GruvboxRedBold
 hi! link TSLabel GruvboxPurple
+hi! link TSOperator GruvboxRedBold
+hi! link TSPunctBracket GruvboxRedBold
+hi! link TSPunctDelimiter GruvboxRedBold
+hi! link TSPunctSpecial GruvboxRedBold
+hi! link TSTagAttribute GruvboxPurple
+hi! link TSTagDelimiter GruvboxRedBold
 
 " }}}
 

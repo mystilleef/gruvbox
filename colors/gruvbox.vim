@@ -503,6 +503,7 @@ hi! link Question GruvboxOrangeBold
 hi! link WarningMsg GruvboxRedBold
 
 " }}}
+
 " Gutter: {{{
 
 " Line number for :number and :# commands
@@ -517,6 +518,7 @@ call s:HL('Folded', s:gray, s:bg1, s:italic)
 call s:HL('FoldColumn', s:gray, s:none)
 
 " }}}
+
 " Cursor: {{{
 
 " Character under cursor
@@ -529,6 +531,7 @@ hi! link iCursor Cursor
 hi! link lCursor Cursor
 
 " }}}
+
 " Syntax Highlighting: {{{
 
 hi! link Special GruvboxOrange
@@ -596,10 +599,12 @@ hi! link Typedef GruvboxYellowBold
 " }}}
 
 " Treesitter {{{
+
 hi! link TSKeyword GruvboxRedBold
 hi! link TSOperator GruvboxRedBold
 hi! link TSPunctDelimiter GruvboxRedBold
 hi! link TSPunctBracket GruvboxRedBold
+
 " }}}
 
 " Completion Menu: {{{
@@ -616,6 +621,7 @@ if version >= 700
 endif
 
 " }}}
+
 " Diffs: {{{
 
 call s:HL('DiffDelete', s:red, s:bg0, s:inverse)
@@ -628,6 +634,7 @@ call s:HL('DiffChange', s:aqua, s:bg0, s:inverse)
 call s:HL('DiffText',   s:yellow, s:bg0, s:inverse)
 
 " }}}
+
 " Spelling: {{{
 
 if has("spell")
@@ -643,40 +650,6 @@ endif
 
 " }}}
 
-" GitGutter: {{{
-
-hi! link GitGutterAdd GruvboxGreenSign
-hi! link GitGutterChange GruvboxAquaSign
-hi! link GitGutterDelete GruvboxRedSign
-hi! link GitGutterChangeDelete GruvboxAquaSign
-
-" }}}
-" GitCommit: "{{{
-
-hi! link gitcommitSelectedFile GruvboxGreen
-hi! link gitcommitDiscardedFile GruvboxRed
-
-" }}}
-" Signify: {{{
-
-hi! link SignifySignAdd GruvboxGreenSign
-hi! link SignifySignChange GruvboxAquaSign
-hi! link SignifySignDelete GruvboxRedSign
-
-" }}}
-" Startify: {{{
-
-hi! link StartifyBracket GruvboxFg3
-hi! link StartifyFile GruvboxFg1
-hi! link StartifyNumber GruvboxBlue
-hi! link StartifyPath GruvboxGray
-hi! link StartifySlash GruvboxGray
-hi! link StartifySection GruvboxYellow
-hi! link StartifySpecial GruvboxBg2
-hi! link StartifyHeader GruvboxOrange
-hi! link StartifyFooter GruvboxBg2
-
-" }}}
 " nvim lsp {{{
 
 hi! link LspDiagnosticsDefaultError GruvboxRed

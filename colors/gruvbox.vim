@@ -718,6 +718,28 @@ hi! link markdownIdDeclaration markdownLinkText
 
 " }}}
 
+" GitGutter: {{{
+
+hi! link GitGutterAdd GruvboxGreenSign
+hi! link GitGutterChange GruvboxAquaSign
+hi! link GitGutterDelete GruvboxRedSign
+hi! link GitGutterChangeDelete GruvboxAquaSign
+
+" }}}
+" GitCommit: "{{{
+
+hi! link gitcommitSelectedFile GruvboxGreen
+hi! link gitcommitDiscardedFile GruvboxRed
+
+" }}}
+" Signify: {{{
+
+hi! link SignifySignAdd GruvboxGreenSign
+hi! link SignifySignChange GruvboxAquaSign
+hi! link SignifySignDelete GruvboxRedSign
+
+" }}}
+
 " Functions -------------------------------------------------------------------
 " Search Highlighting Cursor {{{
 

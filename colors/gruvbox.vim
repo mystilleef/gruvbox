@@ -606,6 +606,7 @@ hi! link TSOperator GruvboxRedBold
 hi! link TSPunctDelimiter GruvboxRedBold
 hi! link TSPunctBracket GruvboxRedBold
 hi! link TSPunctSpecial GruvboxRedBold
+hi! link TSTagDelimiter GruvboxRedBold
 hi! link TSLabel GruvboxPurple
 
 " }}}

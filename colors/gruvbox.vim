@@ -576,7 +576,7 @@ hi! link PreCondit GruvboxAqua
 hi! link Constant GruvboxPurple
 
 " Character constant: 'c', '/n'
-hi! link Character GruvboxPurple
+hi! link Character GruvboxBlue
 
 " String constant: "this is a string"
 call s:HL('String',  s:blue, s:none, s:italicize_strings)

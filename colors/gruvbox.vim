@@ -62,8 +62,6 @@ if !exists('g:gruvbox_invert_indent_guides')
   let g:gruvbox_invert_indent_guides=0
 endif
 
-let s:is_dark=(&background ==? 'dark')
-
 " }}}
 " Palette: {{{
 
@@ -88,23 +86,7 @@ let s:gb.light3      = ['#b0b0b0', 248]     " 189-174-147
 let s:gb.light4      = ['#a0a0a0', 246]     " 168-153-132
 let s:gb.light4_256  = ['#a0a0a0', 246]     " 168-153-132
 
-let s:gb.bright_red     = ['#fb4934', 167]     " 251-73-52
-let s:gb.bright_green   = ['#b8bb26', 142]     " 184-187-38
-let s:gb.bright_yellow  = ['#fabd2f', 214]     " 250-189-47
-let s:gb.bright_blue    = ['#83a598', 109]     " 131-165-152
-let s:gb.bright_purple  = ['#d3869b', 175]     " 211-134-155
-let s:gb.bright_aqua    = ['#8ec07c', 108]     " 142-192-124
-let s:gb.bright_orange  = ['#fe8019', 208]     " 254-128-25
-
-let s:gb.neutral_red    = ['#cc241d', 124]     " 204-36-29
-let s:gb.neutral_green  = ['#98971a', 106]     " 152-151-26
-let s:gb.neutral_yellow = ['#d79921', 172]     " 215-153-33
-let s:gb.neutral_blue   = ['#458588', 66]      " 69-133-136
-let s:gb.neutral_purple = ['#b16286', 132]     " 177-98-134
-let s:gb.neutral_aqua   = ['#689d6a', 72]      " 104-157-106
-let s:gb.neutral_orange = ['#d65d0e', 166]     " 214-93-14
-
-let s:gb.faded_red      = ['#9d0006', 88]      " 157-0-6
+let s:gb.faded_red      = ['#912929', 88]      " 157-0-6
 let s:gb.faded_green    = ['#79740e', 100]     " 121-116-14
 let s:gb.faded_yellow   = ['#b57614', 136]     " 181-118-20
 let s:gb.faded_blue     = ['#076678', 24]      " 7-102-120
@@ -147,66 +129,29 @@ let s:vim_bg = ['bg', 'bg']
 let s:vim_fg = ['fg', 'fg']
 let s:none = ['NONE', 'NONE']
 
-" determine relative colors
-if s:is_dark
-  let s:bg0  = s:gb.dark0
-  let s:bg1  = s:gb.dark1
-  let s:bg2  = s:gb.dark2
-  let s:bg3  = s:gb.dark3
-  let s:bg4  = s:gb.dark4
+let s:bg0  = s:gb.dark0
+let s:bg1  = s:gb.dark1
+let s:bg2  = s:gb.dark2
+let s:bg3  = s:gb.dark3
+let s:bg4  = s:gb.dark4
 
-  let s:gray = s:gb.gray_245
+let s:gray = s:gb.gray_245
 
-  let s:fg0 = s:gb.light0
-  let s:fg1 = s:gb.light1
-  let s:fg2 = s:gb.light2
-  let s:fg3 = s:gb.light3
-  let s:fg4 = s:gb.light4
+let s:fg0 = s:gb.light0
+let s:fg1 = s:gb.light1
+let s:fg2 = s:gb.light2
+let s:fg3 = s:gb.light3
+let s:fg4 = s:gb.light4
 
-  let s:fg4_256 = s:gb.light4_256
+let s:fg4_256 = s:gb.light4_256
 
-  " let s:red    = s:gb.bright_red
-  " let s:green  = s:gb.bright_green
-  " let s:yellow = s:gb.bright_yellow
-  " let s:blue   = s:gb.bright_blue
-  " let s:purple = s:gb.bright_purple
-  " let s:aqua   = s:gb.bright_aqua
-  " let s:orange = s:gb.bright_orange
-
-  let s:red    = s:gb.faded_red
-  let s:green  = s:gb.faded_green
-  let s:yellow = s:gb.faded_yellow
-  let s:blue   = s:gb.faded_blue
-  let s:purple = s:gb.faded_purple
-  let s:aqua   = s:gb.faded_aqua
-  let s:orange = s:gb.faded_orange
-
-else
-  let s:bg0  = s:gb.light0
-  let s:bg1  = s:gb.light1
-  let s:bg2  = s:gb.light2
-  let s:bg3  = s:gb.light3
-  let s:bg4  = s:gb.light4
-
-  let s:gray = s:gb.gray_244
-
-  let s:fg0 = s:gb.dark0
-  let s:fg1 = s:gb.dark1
-  let s:fg2 = s:gb.dark2
-  let s:fg3 = s:gb.dark3
-  let s:fg4 = s:gb.dark4
-
-  let s:fg4_256 = s:gb.dark4_256
-
-  let s:red    = s:gb.faded_red
-  let s:green  = s:gb.faded_green
-  let s:yellow = s:gb.faded_yellow
-  let s:blue   = s:gb.faded_blue
-  let s:purple = s:gb.faded_purple
-  let s:aqua   = s:gb.faded_aqua
-  let s:orange = s:gb.faded_orange
-
-endif
+let s:red    = s:gb.faded_red
+let s:green  = s:gb.faded_green
+let s:yellow = s:gb.faded_yellow
+let s:blue   = s:gb.faded_blue
+let s:purple = s:gb.faded_purple
+let s:aqua   = s:gb.faded_aqua
+let s:orange = s:gb.faded_orange
 
 " reset to 16 colors fallback
 if g:gruvbox_termcolors == 16
@@ -443,14 +388,7 @@ call s:HL('GruvboxOrangeSign', s:orange, s:sign_column, s:invert_signs)
 " Normal text
 call s:HL('Normal', s:fg1, s:bg0)
 
-" Correct background (see issue #7):
-" --- Problem with changing between dark and light on 256 color terminal
-" --- https://github.com/morhetz/gruvbox/issues/7
-if s:is_dark
-  set background=dark
-else
-  set background=light
-endif
+set background=dark
 
 " Screen line that the cursor is
 call s:HL('CursorLine',   s:none, s:bg1)

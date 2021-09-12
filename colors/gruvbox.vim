@@ -623,7 +623,7 @@ hi! link LspDiagnosticsSignWarning GruvboxYellowSign
 hi! link LspDiagnosticsSignInformation GruvboxGreenSign
 hi! link LspDiagnosticsSignHint GruvboxBlueSign
 
-hi! link LspCodeLens GruvboxGray
+hi! link LspCodeLens GruvboxAqua
 hi! link LspCodeLensSeparator GruvboxGray
 
 hi! link LspSignatureActiveParameter  GruvboxBlue

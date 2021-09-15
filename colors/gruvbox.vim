@@ -22,8 +22,6 @@ if !(has('termguicolors') && &termguicolors) && !has('gui_running') && &t_Co != 
   finish
 endif
 
-" }}}
-
 " Global Settings: {{{
 
 if !exists('g:gruvbox_bold')
@@ -62,7 +60,6 @@ if !exists('g:gruvbox_invert_indent_guides')
   let g:gruvbox_invert_indent_guides=0
 endif
 
-" }}}
 " Palette: {{{
 
 " setup palette dictionary
@@ -94,7 +91,6 @@ let s:gb.faded_purple   = ['#8f3f71', 96]      " 143-63-113
 let s:gb.faded_aqua     = ['#427b58', 66]      " 66-123-88
 let s:gb.faded_orange   = ['#af3a03', 130]     " 175-58-3
 
-" }}}
 " Setup Emphasis: {{{
 
 let s:bold = 'bold,'
@@ -122,7 +118,6 @@ if g:gruvbox_inverse == 0
   let s:inverse = ''
 endif
 
-" }}}
 " Setup Colors: {{{
 
 let s:vim_bg = ['bg', 'bg']
@@ -192,7 +187,6 @@ let s:gb.purple = s:purple
 let s:gb.aqua   = s:aqua
 let s:gb.orange = s:orange
 
-" }}}
 " Setup Terminal Colors For Neovim: {{{
 
 if has('nvim')
@@ -221,7 +215,6 @@ if has('nvim')
   let g:terminal_color_15 = s:fg1[0]
 endif
 
-" }}}
 " Overload Setting: {{{
 
 let s:hls_cursor = s:orange
@@ -292,7 +285,6 @@ if exists('g:gruvbox_italicize_strings')
   endif
 endif
 
-" }}}
 " Highlighting Function: {{{
 
 function! s:HL(group, fg, ...)
@@ -341,7 +333,6 @@ function! s:HL(group, fg, ...)
   execute join(histring, ' ')
 endfunction
 
-" }}}
 " Gruvbox Hi Groups: {{{
 
 " memoize common hi groups
@@ -379,8 +370,6 @@ call s:HL('GruvboxBlueSign', s:blue, s:sign_column, s:invert_signs)
 call s:HL('GruvboxPurpleSign', s:purple, s:sign_column, s:invert_signs)
 call s:HL('GruvboxAquaSign', s:aqua, s:sign_column, s:invert_signs)
 call s:HL('GruvboxOrangeSign', s:orange, s:sign_column, s:invert_signs)
-
-" }}}
 
 " Vanilla colorscheme ---------------------------------------------------------
 " General UI: {{{
@@ -451,8 +440,6 @@ hi! link Question GruvboxOrangeBold
 " Warning messages
 hi! link WarningMsg GruvboxRedBold
 
-" }}}
-
 " Gutter: {{{
 
 " Line number for :number and :# commands
@@ -466,8 +453,6 @@ call s:HL('Folded', s:gray, s:bg1, s:italic)
 " Column where folds are displayed
 call s:HL('FoldColumn', s:gray, s:none)
 
-" }}}
-
 " Cursor: {{{
 
 " Character under cursor
@@ -478,8 +463,6 @@ hi! link vCursor Cursor
 hi! link iCursor Cursor
 " Language mapping cursor
 hi! link lCursor Cursor
-
-" }}}
 
 " Syntax Highlighting: {{{
 
@@ -545,8 +528,6 @@ hi! link Structure GruvboxYellowBold
 " typedef
 hi! link Typedef GruvboxYellowBold
 
-" }}}
-
 " Treesitter {{{
 
 hi! link TSKeyword GruvboxRedBold
@@ -557,8 +538,6 @@ hi! link TSPunctDelimiter GruvboxRedBold
 hi! link TSPunctSpecial GruvboxRedBold
 hi! link TSTagAttribute GruvboxPurple
 hi! link TSTagDelimiter GruvboxRedBold
-
-" }}}
 
 " Completion Menu: {{{
 
@@ -571,8 +550,6 @@ call s:HL('PmenuSbar', s:none, s:bg2)
 " Popup menu: scrollbar thumb
 call s:HL('PmenuThumb', s:none, s:bg4)
 
-" }}}
-
 " Diffs: {{{
 
 call s:HL('DiffDelete', s:red, s:bg0, s:inverse)
@@ -583,8 +560,6 @@ call s:HL('DiffAdd',    s:green, s:bg0, s:inverse)
 " Alternative setting
 call s:HL('DiffChange', s:aqua, s:bg0, s:inverse)
 call s:HL('DiffText',   s:yellow, s:bg0, s:inverse)
-
-" }}}
 
 " Spelling: {{{
 
@@ -598,8 +573,6 @@ if has('spell')
   " Rare word
   call s:HL('SpellRare',  s:none, s:none, s:undercurl, s:purple)
 endif
-
-" }}}
 
 " nvim lsp {{{
 
@@ -633,8 +606,6 @@ call s:HL('LspDiagnosticsUnderlineWarning', s:none, s:none, s:undercurl, s:yello
 call s:HL('LspDiagnosticsUnderlineInformation', s:none, s:none, s:undercurl, s:green)
 call s:HL('LspDiagnosticsUnderlineHint', s:none, s:none, s:undercurl, s:blue)
 
-" }}}
-
 " GitGutter: {{{
 
 hi! link GitGutterAdd GruvboxGreenSign
@@ -642,22 +613,17 @@ hi! link GitGutterChange GruvboxAquaSign
 hi! link GitGutterDelete GruvboxRedSign
 hi! link GitGutterChangeDelete GruvboxAquaSign
 
-" }}}
-
 " GitCommit: "{{{
 
 hi! link gitcommitSelectedFile GruvboxGreen
 hi! link gitcommitDiscardedFile GruvboxRed
 
-" }}}
 
 " Signify: {{{
 
 hi! link SignifySignAdd GruvboxGreenSign
 hi! link SignifySignChange GruvboxAquaSign
 hi! link SignifySignDelete GruvboxRedSign
-
-" }}}
 
 " Functions -------------------------------------------------------------------
 " Search Highlighting Cursor {{{
@@ -670,4 +636,3 @@ function! GruvboxHlsHideCursor()
   call s:HL('Cursor', s:none, s:none, s:inverse)
 endfunction
 
-" }}}

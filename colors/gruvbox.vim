@@ -576,35 +576,35 @@ endif
 
 " nvim lsp {{{
 
-hi! link DiagnosticsDefaultError GruvboxRed
-hi! link DiagnosticsDefaultWarn GruvboxYellow
-hi! link DiagnosticsDefaultInfo GruvboxGreen
-hi! link DiagnosticsDefaultHint GruvboxBlue
+" hi! link DiagnosticsDefaultError GruvboxRed
+" hi! link DiagnosticsDefaultWarn GruvboxYellow
+" hi! link DiagnosticsDefaultInfo GruvboxGreen
+" hi! link DiagnosticsDefaultHint GruvboxBlue
 
-hi! link DiagnosticsVirtualTextError GruvboxRed
-hi! link DiagnosticsVirtualTextWarn GruvboxYellow
-hi! link DiagnosticsVirtualTextInfo  GruvboxGreen
-hi! link DiagnosticsVirtualTextHint GruvboxBlue
+" hi! link DiagnosticsVirtualTextError GruvboxRed
+" hi! link DiagnosticsVirtualTextWarn GruvboxYellow
+" hi! link DiagnosticsVirtualTextInfo  GruvboxGreen
+" hi! link DiagnosticsVirtualTextHint GruvboxBlue
 
-hi! link DiagnosticsFloatingError GruvboxRed
-hi! link DiagnosticsFloatingWarning GruvboxYellow
-hi! link DiagnosticsFloatingInfo GruvboxGreen
-hi! link DiagnosticsFloatingHint GruvboxBlue
+" hi! link DiagnosticsFloatingError GruvboxRed
+" hi! link DiagnosticsFloatingWarning GruvboxYellow
+" hi! link DiagnosticsFloatingInfo GruvboxGreen
+" hi! link DiagnosticsFloatingHint GruvboxBlue
 
-hi! link DiagnosticsSignError GruvboxRedSign
-hi! link DiagnosticsSignWarn GruvboxYellowSign
-hi! link DiagnosticsSignInfo GruvboxGreenSign
-hi! link DiagnosticsSignHint GruvboxBlueSign
+" hi! link DiagnosticsSignError GruvboxRedSign
+" hi! link DiagnosticsSignWarn GruvboxYellowSign
+" hi! link DiagnosticsSignInfo GruvboxGreenSign
+" hi! link DiagnosticsSignHint GruvboxBlueSign
 
 hi! link LspCodeLens GruvboxAqua
 hi! link LspCodeLensSeparator GruvboxGray
 
 hi! link LspSignatureActiveParameter  GruvboxBlue
 
-call s:HL('DiagnosticsUnderlineError', s:none, s:none, s:undercurl, s:red)
-call s:HL('DiagnosticsUnderlineWarn', s:none, s:none, s:undercurl, s:yellow)
-call s:HL('DiagnosticsUnderlineInfo', s:none, s:none, s:undercurl, s:green)
-call s:HL('DiagnosticsUnderlineHint', s:none, s:none, s:undercurl, s:blue)
+" call s:HL('DiagnosticsUnderlineError', s:none, s:none, s:undercurl, s:red)
+" call s:HL('DiagnosticsUnderlineWarn', s:none, s:none, s:undercurl, s:yellow)
+" call s:HL('DiagnosticsUnderlineInfo', s:none, s:none, s:undercurl, s:green)
+" call s:HL('DiagnosticsUnderlineHint', s:none, s:none, s:undercurl, s:blue)
 
 " GitGutter: {{{
 

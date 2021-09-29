@@ -574,37 +574,37 @@ if has('spell')
   call s:HL('SpellRare',  s:none, s:none, s:undercurl, s:purple)
 endif
 
-" nvim lsp {{{
+" nvim lsp diagnostic {{{
 
-" hi! link DiagnosticsDefaultError GruvboxRed
-" hi! link DiagnosticsDefaultWarn GruvboxYellow
-" hi! link DiagnosticsDefaultInfo GruvboxGreen
-" hi! link DiagnosticsDefaultHint GruvboxBlue
+hi! link DiagnosticError GruvboxRed
+hi! link DiagnosticWarn GruvboxYellow
+hi! link DiagnosticInfo GruvboxGreen
+hi! link DiagnosticHint GruvboxBlue
 
-" hi! link DiagnosticsVirtualTextError GruvboxRed
-" hi! link DiagnosticsVirtualTextWarn GruvboxYellow
-" hi! link DiagnosticsVirtualTextInfo  GruvboxGreen
-" hi! link DiagnosticsVirtualTextHint GruvboxBlue
+hi! link DiagnosticVirtualTextError GruvboxRed
+hi! link DiagnosticVirtualTextWarn GruvboxYellow
+hi! link DiagnosticVirtualTextInfo  GruvboxGreen
+hi! link DiagnosticVirtualTextHint GruvboxBlue
 
-" hi! link DiagnosticsFloatingError GruvboxRed
-" hi! link DiagnosticsFloatingWarning GruvboxYellow
-" hi! link DiagnosticsFloatingInfo GruvboxGreen
-" hi! link DiagnosticsFloatingHint GruvboxBlue
+hi! link DiagnosticFloatingError GruvboxRed
+hi! link DiagnosticFloatingWarning GruvboxYellow
+hi! link DiagnosticFloatingInfo GruvboxGreen
+hi! link DiagnosticFloatingHint GruvboxBlue
 
-" hi! link DiagnosticsSignError GruvboxRedSign
-" hi! link DiagnosticsSignWarn GruvboxYellowSign
-" hi! link DiagnosticsSignInfo GruvboxGreenSign
-" hi! link DiagnosticsSignHint GruvboxBlueSign
+hi! link DiagnosticSignError GruvboxRedSign
+hi! link DiagnosticSignWarn GruvboxYellowSign
+hi! link DiagnosticSignInfo GruvboxGreenSign
+hi! link DiagnosticSignHint GruvboxBlueSign
+
+call s:HL('DiagnosticUnderlineError', s:none, s:none, s:undercurl, s:red)
+call s:HL('DiagnosticUnderlineWarn', s:none, s:none, s:undercurl, s:yellow)
+call s:HL('DiagnosticUnderlineInfo', s:none, s:none, s:undercurl, s:green)
+call s:HL('DiagnosticUnderlineHint', s:none, s:none, s:undercurl, s:blue)
 
 hi! link LspCodeLens GruvboxAqua
 hi! link LspCodeLensSeparator GruvboxGray
 
 hi! link LspSignatureActiveParameter  GruvboxBlue
-
-" call s:HL('DiagnosticsUnderlineError', s:none, s:none, s:undercurl, s:red)
-" call s:HL('DiagnosticsUnderlineWarn', s:none, s:none, s:undercurl, s:yellow)
-" call s:HL('DiagnosticsUnderlineInfo', s:none, s:none, s:undercurl, s:green)
-" call s:HL('DiagnosticsUnderlineHint', s:none, s:none, s:undercurl, s:blue)
 
 " GitGutter: {{{
 

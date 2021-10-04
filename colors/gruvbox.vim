@@ -9,7 +9,7 @@ scriptencoding utf-8
 " -----------------------------------------------------------------------------
 
 " Supporting code -------------------------------------------------------------
-" Initialisation: {{{
+" Initialisation
 
 hi clear
 if exists('syntax_on')
@@ -60,7 +60,7 @@ if !exists('g:gruvbox_invert_indent_guides')
   let g:gruvbox_invert_indent_guides=0
 endif
 
-" Palette: {{{
+" Palette
 
 " setup palette dictionary
 let s:gb = {}
@@ -91,7 +91,7 @@ let s:gb.faded_purple   = ['#8f3f71', 96]      " 143-63-113
 let s:gb.faded_aqua     = ['#427b58', 66]      " 66-123-88
 let s:gb.faded_orange   = ['#af3a03', 130]     " 175-58-3
 
-" Setup Emphasis: {{{
+" Setup Emphasis
 
 let s:bold = 'bold,'
 if g:gruvbox_bold == 0
@@ -187,7 +187,7 @@ let s:gb.purple = s:purple
 let s:gb.aqua   = s:aqua
 let s:gb.orange = s:orange
 
-" Setup Terminal Colors For Neovim: {{{
+" Setup Terminal Colors For Neovim
 
 if has('nvim')
   let g:terminal_color_0 = s:bg0[0]
@@ -215,7 +215,7 @@ if has('nvim')
   let g:terminal_color_15 = s:fg1[0]
 endif
 
-" Overload Setting: {{{
+" Overload Setting
 
 let s:hls_cursor = s:orange
 if exists('g:gruvbox_hls_cursor')
@@ -285,7 +285,7 @@ if exists('g:gruvbox_italicize_strings')
   endif
 endif
 
-" Highlighting Function: {{{
+" Highlighting Function
 
 function! s:HL(group, fg, ...)
   " Arguments: group, guifg, guibg, gui, guisp
@@ -333,7 +333,7 @@ function! s:HL(group, fg, ...)
   execute join(histring, ' ')
 endfunction
 
-" Gruvbox Hi Groups: {{{
+" Gruvbox Hi Groups
 
 " memoize common hi groups
 call s:HL('GruvboxFg0', s:fg0)
@@ -372,7 +372,7 @@ call s:HL('GruvboxAquaSign', s:aqua, s:sign_column, s:invert_signs)
 call s:HL('GruvboxOrangeSign', s:orange, s:sign_column, s:invert_signs)
 
 " Vanilla colorscheme ---------------------------------------------------------
-" General UI: {{{
+" General UI
 
 " Normal text
 call s:HL('Normal', s:fg1, s:bg0)
@@ -440,7 +440,7 @@ hi! link Question GruvboxOrangeBold
 " Warning messages
 hi! link WarningMsg GruvboxRedBold
 
-" Gutter: {{{
+" Gutter
 
 " Line number for :number and :# commands
 call s:HL('LineNr', s:bg2, s:number_column)
@@ -453,7 +453,7 @@ call s:HL('Folded', s:gray, s:bg1, s:italic)
 " Column where folds are displayed
 call s:HL('FoldColumn', s:gray, s:none)
 
-" Cursor: {{{
+" Cursor
 
 " Character under cursor
 call s:HL('Cursor', s:none, s:none, s:inverse)
@@ -464,7 +464,7 @@ hi! link iCursor Cursor
 " Language mapping cursor
 hi! link lCursor Cursor
 
-" Syntax Highlighting: {{{
+" Syntax Highlighting
 
 hi! link Special GruvboxOrange
 
@@ -528,7 +528,7 @@ hi! link Structure GruvboxYellowBold
 " typedef
 hi! link Typedef GruvboxYellowBold
 
-" Treesitter {{{
+" Treesitter
 
 hi! link TSKeyword GruvboxRedBold
 hi! link TSLabel GruvboxPurple
@@ -539,7 +539,7 @@ hi! link TSPunctSpecial GruvboxRedBold
 hi! link TSTagAttribute GruvboxPurple
 hi! link TSTagDelimiter GruvboxRedBold
 
-" Completion Menu: {{{
+" Completion Menu
 
 " Popup menu: normal item
 call s:HL('Pmenu', s:fg1, s:bg2)
@@ -550,7 +550,7 @@ call s:HL('PmenuSbar', s:none, s:bg2)
 " Popup menu: scrollbar thumb
 call s:HL('PmenuThumb', s:none, s:bg4)
 
-" Diffs: {{{
+" Diffs
 
 call s:HL('DiffDelete', s:red, s:bg0, s:inverse)
 call s:HL('DiffAdd',    s:green, s:bg0, s:inverse)
@@ -561,7 +561,7 @@ call s:HL('DiffAdd',    s:green, s:bg0, s:inverse)
 call s:HL('DiffChange', s:aqua, s:bg0, s:inverse)
 call s:HL('DiffText',   s:yellow, s:bg0, s:inverse)
 
-" Spelling: {{{
+" Spelling
 
 if has('spell')
   " Not capitalised word, or compile warnings
@@ -606,20 +606,20 @@ hi! link LspCodeLensSeparator GruvboxGray
 
 hi! link LspSignatureActiveParameter  GruvboxBlue
 
-" GitGutter: {{{
+" GitGutter
 
 hi! link GitGutterAdd GruvboxGreenSign
 hi! link GitGutterChange GruvboxAquaSign
 hi! link GitGutterDelete GruvboxRedSign
 hi! link GitGutterChangeDelete GruvboxAquaSign
 
-" GitCommit: "{{{
+" GitCommit
 
 hi! link gitcommitSelectedFile GruvboxGreen
 hi! link gitcommitDiscardedFile GruvboxRed
 
 
-" Signify: {{{
+" Signify
 
 hi! link SignifySignAdd GruvboxGreenSign
 hi! link SignifySignChange GruvboxAquaSign

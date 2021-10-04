@@ -627,9 +627,9 @@ hi! link SignifySignDelete GruvboxRedSign
 
 " Showmarks
 hi! link ShowMarksHLl GruvboxRedBold
-hi! link ShowMarksHLu GruvboxGreenBold
-hi! link ShowMarksHLo GruvboxYellowBold
-hi! link ShowMarksHLm GruvboxAquaBold
+hi! link ShowMarksHLu GruvboxYellowBold
+hi! link ShowMarksHLo GruvboxAquaBold
+hi! link ShowMarksHLm GruvboxGreenBold
 
 " Functions -------------------------------------------------------------------
 " Search Highlighting Cursor {{{

@@ -22,7 +22,7 @@ if !(has('termguicolors') && &termguicolors) && !has('gui_running') && &t_Co != 
   finish
 endif
 
-" Global Settings: {{{
+" Global Settings
 
 if !exists('g:gruvbox_bold')
   let g:gruvbox_bold=1

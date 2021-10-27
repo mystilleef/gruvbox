@@ -67,6 +67,7 @@ let s:gb = {}
 
 " fill it with absolute colors
 let s:gb.dark0       = ['#101010', 235]     " 40-40-40
+let s:gb.dark0_245   = ['#111111', 236]     " 40-40-40
 let s:gb.dark1       = ['#202020', 237]     " 60-56-54
 let s:gb.dark2       = ['#303030', 239]     " 80-73-69
 let s:gb.dark3       = ['#404040', 241]     " 102-92-84
@@ -130,6 +131,7 @@ let s:bg2  = s:gb.dark2
 let s:bg3  = s:gb.dark3
 let s:bg4  = s:gb.dark4
 
+let s:cursor = s:gb.dark0_245
 let s:gray = s:gb.gray_245
 
 let s:fg0 = s:gb.light0
@@ -169,6 +171,7 @@ let s:gb.bg2 = s:bg2
 let s:gb.bg3 = s:bg3
 let s:gb.bg4 = s:bg4
 
+let s:gb.dark0_245 = s:cursor
 let s:gb.gray = s:gray
 
 let s:gb.fg0 = s:fg0
@@ -240,7 +243,7 @@ else
   endif
 endif
 
-let s:color_column = s:bg1
+let s:color_column = s:cursor
 if exists('g:gruvbox_color_column')
   let s:color_column = get(s:gb, g:gruvbox_color_column)
 endif
@@ -342,6 +345,7 @@ call s:HL('GruvboxFg2', s:fg2)
 call s:HL('GruvboxFg3', s:fg3)
 call s:HL('GruvboxFg4', s:fg4)
 call s:HL('GruvboxGray', s:gray)
+call s:HL('GruvboxCursor', s:cursor)
 call s:HL('GruvboxBg0', s:bg0)
 call s:HL('GruvboxBg1', s:bg1)
 call s:HL('GruvboxBg2', s:bg2)
@@ -380,7 +384,7 @@ call s:HL('Normal', s:fg1, s:bg0)
 set background=dark
 
 " Screen line that the cursor is
-call s:HL('CursorLine',   s:none, s:bg1)
+call s:HL('CursorLine',   s:none, s:cursor)
 " Screen column that the cursor is
 hi! link CursorColumn CursorLine
 
@@ -395,7 +399,7 @@ hi! link TabLine TabLineFill
 call s:HL('MatchParen', s:none, s:bg3, s:bold)
 
 " Highlighted screen columns
-call s:HL('ColorColumn',  s:none, s:color_column)
+call s:HL('ColorColumn',  s:none, s:cursor)
 
 " Concealed element: \lambda → λ
 call s:HL('Conceal', s:blue, s:none)

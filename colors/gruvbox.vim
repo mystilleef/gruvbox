@@ -67,7 +67,7 @@ let s:gb = {}
 
 " fill it with absolute colors
 let s:gb.dark0       = ['#101010', 235]     " 40-40-40
-let s:gb.dark0_245   = ['#111111', 236]     " 40-40-40
+let s:gb.dark0_245   = ['#151515', 236]     " 40-40-40
 let s:gb.dark1       = ['#202020', 237]     " 60-56-54
 let s:gb.dark2       = ['#303030', 239]     " 80-73-69
 let s:gb.dark3       = ['#404040', 241]     " 102-92-84
@@ -405,7 +405,7 @@ call s:HL('ColorColumn',  s:none, s:cursor)
 call s:HL('Conceal', s:blue, s:none)
 
 " Line number of CursorLine
-call s:HL('CursorLineNr', s:yellow, s:bg1)
+call s:HL('CursorLineNr', s:yellow, s:cursor)
 
 hi! link NonText GruvboxBg2
 hi! link SpecialKey GruvboxBg2

@@ -443,15 +443,15 @@ hi! link WarningMsg GruvboxRedBold
 " Gutter
 
 " Line number for :number and :# commands
-call s:HL('LineNr', s:bg2, s:number_column)
+call s:HL('LineNr', s:bg1, s:number_column)
 
 " Column where signs are displayed
 call s:HL('SignColumn', s:none, s:sign_column)
 
 " Line used for closed folds
-call s:HL('Folded', s:gray, s:bg1, s:italic)
+call s:HL('Folded', s:bg1, s:none, s:none)
 " Column where folds are displayed
-call s:HL('FoldColumn', s:gray, s:none)
+call s:HL('FoldColumn', s:bg1, s:none)
 
 " Cursor
 
